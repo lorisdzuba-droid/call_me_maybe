@@ -1,0 +1,5 @@
+export VIRTUAL_ENV="/sgoinfre/students/$USER/CMM/venv"
+export UV_PROJECT_ENVIRONMENT="$VIRTUAL_ENV"
+export UV_PYTHON_CACHE_DIR="/sgoinfre/students/$USER/CMM/uv/cache"
+export UV_CACHE_DIR="/sgoinfre/students/$USER/CMM/uv/cache"
+export HF_HOME="/sgoinfre/students/$USER/huggingface"
