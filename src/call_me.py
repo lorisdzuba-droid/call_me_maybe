@@ -152,7 +152,6 @@ class ConstrainedFunctionCaller(BaseModel):
                     self._stage = "NEED_SPACE"
                 return result
         elif param_type == "object":
-            # Must start with '{', end with '}', and braces balanced
             if not (value.startswith('{') and value.endswith('}')):
                 return False
             depth = 0
@@ -193,8 +192,6 @@ class ConstrainedFunctionCaller(BaseModel):
             if not self._is_value_complete(value, param_info["type"],
                                            param_name):
                 return False
-        # Also ensure that the last parameter's value is actually "closed"
-        # For numbers, this is automatically true if valid.
         return True
 
     def _load_vocabulary(self) -> None:
