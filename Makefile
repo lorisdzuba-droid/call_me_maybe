@@ -6,7 +6,7 @@ install:
 run:
 	uv run python -m src $(ARGS)
 debug:
-	uv run python3 -m pdb -m src
+	uv run python3 -m pdb -m src $(ARGS)
 lint:
 	@flake8 . --exclude "llm_sdk .venv" || true
 	@mypy . --warn-return-any --warn-unused-ignores --ignore-missing-imports --disallow-untyped-defs --check-untyped-defs
